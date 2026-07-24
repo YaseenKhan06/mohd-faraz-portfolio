@@ -1177,7 +1177,38 @@ input, textarea {
 }
 
 @media (max-width: 768px) {
-  /* --- Global Mobile Alignments & Typography --- */
+  /* --- Mobile Header, Alignments & Typography --- */
+  .header {
+    padding: 16px 0;
+  }
+
+  .nav-container {
+    width: 100%;
+    padding: 0 16px; /* Spacing 12-16px from screen edges */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .logo-subtitle {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+  }
+
+  .btn-outline-talk {
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
   .column-eyebrow {
     justify-content: center;
   }
@@ -1185,6 +1216,10 @@ input, textarea {
   .column-title {
     text-align: center;
     font-size: 1.75rem;
+  }
+
+  .about-section {
+    padding: 24px 0 48px; /* Reduced by 40% on mobile (40px -> 24px, 80px -> 48px) */
   }
 
   .about-text-content p,
@@ -1204,7 +1239,7 @@ input, textarea {
   /* --- Navigation Touch Area Optimization --- */
   .nav-menu {
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: 0;
     width: 100%;
     background: #0E1017;
