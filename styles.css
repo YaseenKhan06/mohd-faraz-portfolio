@@ -1177,36 +1177,66 @@ input, textarea {
 }
 
 @media (max-width: 768px) {
-  /* --- Mobile Header, Alignments & Typography --- */
+  /* --- Mobile Header Fix --- */
   .header {
-    padding: 16px 0;
+    padding: 12px 0;
+    overflow: hidden;
   }
 
-  .nav-container {
+  /* Override the .container width constraint only inside the header */
+  .header .nav-container {
     width: 100%;
-    padding: 0 16px; /* Spacing 12-16px from screen edges */
+    max-width: 100%;
+    margin: 0;
+    padding: 0 14px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Allow logo to shrink so buttons always fit */
+  .header .logo-link {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .logo-title {
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .logo-subtitle {
-    font-size: 0.6rem;
-    letter-spacing: 1.5px;
+    font-size: 0.58rem;
+    white-space: nowrap;
+  }
+
+  /* Right side — never shrinks, always visible */
+  .nav-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .btn-outline-talk {
-    padding: 8px 14px;
-    font-size: 0.75rem;
+    display: inline-flex;
+    padding: 6px 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
   }
 
-  .nav-right {
-    gap: 10px;
+  .mobile-toggle {
+    display: flex;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
   }
 
   .column-eyebrow {
