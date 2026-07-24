@@ -46,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -1222,21 +1223,9 @@ input, textarea {
     gap: 8px;
   }
 
-  .btn-outline-talk {
-    display: inline-flex;
-    padding: 6px 12px;
-    font-size: 0.72rem;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-  }
-
+  .btn-outline-talk,
   .mobile-toggle {
-    display: flex;
-    flex-shrink: 0;
-    width: 38px;
-    height: 38px;
-    align-items: center;
-    justify-content: center;
+    display: none;
   }
 
   .column-eyebrow {
@@ -1394,6 +1383,18 @@ input, textarea {
   }
 
   /* --- Services Section Mobile Optimization --- */
+  .glass-card {
+    padding: 20px;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .contact-box {
+    padding: 24px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
